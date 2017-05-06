@@ -88,7 +88,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'http://api.smsfusion.com.au/';
+    protected $host = 'https://api.smsfusion.com.au/';
 
     /**
      * Timeout (second) of the HTTP request, by default set to 0, no timeout

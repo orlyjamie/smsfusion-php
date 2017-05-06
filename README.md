@@ -62,7 +62,7 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('key', 'YOUR_
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('key', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\DefaultApi();
+$api_instance = new Swagger\Client\Api\HLRApi();
 $key = "key_example"; // string | API Key as generated from the <a href='https://www.smsfusion.com.au/admin/api/'>admin panel</a>
 $num = "num_example"; // string | A single phone number or <a href='https://www.smsfusion.com.au/help/msisdn/'>MSDISDN</a>
 $cc = "cc_example"; // string | 2 character country code <a href='https://en.wikipedia.org/wiki/ISO_3166-2'>ISO 3166-2</a> for formatting local numbers internationally
@@ -71,7 +71,7 @@ try {
     $result = $api_instance->getHLR($key, $num, $cc);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->getHLR: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling HLRApi->getHLR: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -79,12 +79,13 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.smsfusion.com.au/*
+All URIs are relative to *https://api.smsfusion.com.au/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**getHLR**](docs/Api/DefaultApi.md#gethlr) | **GET** /hlr/ | HLR number lookup
-*DefaultApi* | [**getHLRCallback**](docs/Api/DefaultApi.md#gethlrcallback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*HLRApi* | [**getHLR**](docs/Api/HLRApi.md#gethlr) | **GET** /hlr/ | HLR number lookup
+*HLRApi* | [**getHLRCallback**](docs/Api/HLRApi.md#gethlrcallback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SMSApi* | [**sendSMS**](docs/Api/SMSApi.md#sendsms) | **GET** /sms/ | Send an SMS
 
 
 ## Documentation For Models
@@ -93,6 +94,7 @@ Class | Method | HTTP request | Description
  - [HLRError](docs/Model/HLRError.md)
  - [HLRResult](docs/Model/HLRResult.md)
  - [OutOfCredit](docs/Model/OutOfCredit.md)
+ - [SMSResult](docs/Model/SMSResult.md)
 
 
 ## Documentation For Authorization
